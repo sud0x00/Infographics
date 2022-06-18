@@ -49,3 +49,26 @@ Get-WindowsPackage -Online | Where PackageName -like *MediaPlayer* | Remove-Wind
 ```
 
 Refer - https://fdossena.com/?p=w10debotnet/index_1803.frag
+
+
+
+
+
+
+Arch wsl2 copypasta
+ -https://pastebin.com/raw/X9kTp5ev
+```
+Arch.exe
+passwd
+Arch.exe 
+echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel
+useradd -m -G wheel -s /bin/bash kunal
+passwd kunal
+Arch.exe config --default-user kunal
+
+net stop lxssmanager
+net start lxssmanager
+sudo pacman-key --init
+sudo pacman-key --populate
+sudo pacman -Syy archlinux-keyring
+```
